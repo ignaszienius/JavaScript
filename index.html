@@ -17,10 +17,23 @@
 			<div id="rezultatas">0</div>
 		</div>
 		<div class="col right">
-			<input id="a" class="form-control" type="text" name="a">
-			<input id="b" class="form-control" type="text" name="b">
 			<button onclick="calc()" class="btn btn-lg btn-outline-warning">GO!</button>
 		</div>
+	</div>
+	<div class="row">
+		<div class="col langel 1">1</div>
+		<div class="col langel 2">2</div>
+		<div class="col langel 3">3</div>
+	</div>
+	<div class="row">
+		<div class="col langel 4">4</div>
+		<div class="col langel 5">5</div>
+		<div class="col langel 6">6</div>
+	</div>
+	<div class="row">
+		<div class="col langel 7">7</div>
+		<div class="col langel 8">8</div>
+		<div class="col langel 9">9</div>
 	</div>
 </div>
 <!--komentaras -->
@@ -29,6 +42,7 @@
 <script>
 	//aprasome kintamuosius
 	var random;
+	//gaunam random reiksme 
 	function calc() {
 		random = Math.round(Math.random() * 10) ;
 		//rezultatas parodomas broseryje
