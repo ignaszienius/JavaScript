@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6 paskaita</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row head">
+		<h1>Java Script</h1>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col left">
+			<div id="rezultatas">0</div>
+		</div>
+		<div class="col right">
+			<input id="a" class="form-control" type="text" name="a">
+			<input id="b" class="form-control" type="text" name="b">
+			<button onclick="calc()" class="btn btn-lg btn-outline-warning">GO!</button>
+		</div>
+	</div>
+</div>
+<!--komentaras -->
+</body>
+</html>
+<script>
+	//aprasome kintamuosius
+	var a, b, suma;
+	function calc() {
+		//gaunamos lauku reiksmes
+		a = document.getElementById("a").value;
+		b = document.getElementById("b").value;
+		//sumuojama
+		suma =((parseInt(a) + parseInt(b)) / parseInt(b)) + ((parseInt(a) * (parseInt(b)) ;
+		//rezultatas parodomas broseryje
+		document.getElementById("rezultatas").innerHTML="Rezultatas yra " + suma;
+		document.getElementById("rezultatas").style.color = "red";
+	}
+	
+</script>
