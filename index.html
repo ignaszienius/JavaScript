@@ -28,16 +28,10 @@
 </html>
 <script>
 	//aprasome kintamuosius
-	var a, b, suma;
+	var random;
 	function calc() {
-		//gaunamos lauku reiksmes
-		a = document.getElementById("a").value;
-		b = document.getElementById("b").value;
-		//sumuojama
-		suma =((parseInt(a) + parseInt(b)) / parseInt(b)) + ((parseInt(a) * (parseInt(b)) ;
+		random =Math.round(Math.random() * 10) ;
 		//rezultatas parodomas broseryje
-		document.getElementById("rezultatas").innerHTML="Rezultatas yra " + suma;
-		document.getElementById("rezultatas").style.color = "red";
 	}
 	
 </script>
