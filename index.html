@@ -13,11 +13,8 @@
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col left">
-			<div id="rezultatas">0</div>
-		</div>
 		<div class="col right">
-			<button onclick="calc()" class="btn btn-lg btn-outline-warning">GO!</button>
+			<button onclick="calc()" class="btn btn-lg btn-outline-warning">Change random button</button>
 		</div>
 	</div>
 	<div class="row">
@@ -41,18 +38,15 @@
 </html>
 <script>
 	//aprasome kintamuosius
-	var random, C1, C2, C3, C4, C5, C6, C7, C8, C9;
+	var random,  ;
 
 	//gaunam random reiksme 
 	function calc() {
 		random = Math.round(Math.random() * 10) ;
 		
-	//gauta random reiksme parodomas broseryje
-		document.getElementById('rezultatas').innerHTML = random;
 
-		rezultatas = random;
-
-		document.getElementById('rezultatas').style.backgroundColor = "red";
+	//pakeiciam random langelio background color	
+		document.getElementById('random').style.backgroundColor = "red";
 		
 	}
 	
