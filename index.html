@@ -38,16 +38,17 @@
 </html>
 <script>
 	//aprasome kintamuosius
-	var random,  ;
+	var random;
 
 	//gaunam random reiksme 
 	function calc() {
-		random = Math.round(Math.random() * 10) ;
-		
-
-	//pakeiciam random langelio background color	
-		document.getElementById('random').style.backgroundColor = "red";
-		
+		random = Math.floor(Math.random() * 10)+1 ;
+	//nudazom visus langelius baltai
+	for (var i = 1 ; i <=9 ; i++) {
+		document.getElementById(i).style.backgroundColor = "orange";		
+		}	
+	//pakeiciam random langelio background color i red	
+		document.getElementById(random).style.backgroundColor = "red";	
 	}
 	
 </script>
