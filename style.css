@@ -28,5 +28,20 @@
 	text-align: center;
 	padding: 5px;
 	border:2px solid black;
-	background-color: yellow ! important
+}
+
+#luckynumber {
+	background-color: orange;
+	text-align: center;
+	padding: 10px;
+	border:2px solid black;
+}
+
+#currentnumber {
+	background-color: orange;
+	text-align: center;
+	padding: 15px;
+	border:2px solid black;
+	height: 80px;
+	font-size: 40px;
 }

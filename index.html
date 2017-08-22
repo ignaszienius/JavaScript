@@ -14,41 +14,76 @@
 <div class="container">
 	<div class="row">
 		<div class="col right">
-			<button onclick="calc()" class="btn btn-lg btn-outline-warning">Change random button</button>
+			<button onclick="getnumber()" class="btn btn-lg btn-outline-warning">Ridenam!</button>
+		</div>
+		<div class="col right">
+			<button onclick="newgame()" class="btn btn-lg btn-outline-warning">New game</button>
 		</div>
 	</div>
 	<div class="row">
+		<div id="0" class="col langel C0">0</div>
 		<div id="1" class="col langel C1">1</div>
 		<div id="2" class="col langel C2">2</div>
 		<div id="3" class="col langel C3">3</div>
-	</div>
-	<div class="row">
 		<div id="4" class="col langel C4">4</div>
 		<div id="5" class="col langel C5">5</div>
 		<div id="6" class="col langel C6">6</div>
-	</div>
-	<div class="row">
 		<div id="7" class="col langel C7">7</div>
 		<div id="8" class="col langel C8">8</div>
 		<div id="9" class="col langel C9">9</div>
 	</div>
+	<div id="luckynumber" class="row">
+
+	</div>
+	<div class="row">
+	<div id="currentnumber" class="col-2"> </div>
+	</div>
+
 </div>
 <!--komentaras -->
 </body>
 </html>
 <script>
 	//aprasome kintamuosius
-	var random;
+	var random,lucky;
+	var gameover = false;
+	lucky = [];
 
-	//gaunam random reiksme 
-	function calc() {
-		random = Math.floor(Math.random() * 10)+1 ;
-	//nudazom visus langelius baltai
-	for (var i = 1 ; i <=9 ; i++) {
-		document.getElementById(i).style.backgroundColor = "orange";		
-		}	
-	//pakeiciam random langelio background color i red	
-		document.getElementById(random).style.backgroundColor = "red";	
+	function getnumber() {
+		if (!gameover) {
+			cleartable();
+			random = Math.floor(Math.random() * 10) ;
+			document.getElementById("currentnumber").innerHTML = random;
+			document.getElementById(random).style.backgroundColor = "red";	
+			lucky.push(random);
+			document.getElementById("luckynumber").innerHTML = lucky;
+		}
+		checkgameover();
 	}
-	
+
+	function cleartable()  {
+		for (var i = 0 ; i <=9 ; i++) {
+			document.getElementById(i).style.backgroundColor = "orange";		
+		}
+	}
+			
+	function checkgameover() {
+			if(lucky.length<8) {//zaidimas tesiasi 
+		}	
+		else {
+			alert("Game is over!");
+			gameover = true;
+		}
+	}
+
+	function newgame() {
+			lucky = [];
+			gameover = false;
+			cleartable();
+			document.getElementById("currentnumber").innerHTML = [];
+
+	}
+
+
+
 </script>
