@@ -36,7 +36,8 @@
 
 	</div>
 	<div class="row">
-	<div id="currentnumber" class="col-2"> </div>
+		<div id="currentnumber" class="col-2"> </div>
+		<div id="luckyticket" class="col-8">  </div>
 	</div>
 
 </div>
@@ -45,9 +46,12 @@
 </html>
 <script>
 	//aprasome kintamuosius
-	var random,lucky;
+	var random,lucky, ik;
 	var gameover = false;
-	lucky = [];
+	var lucky = [];
+	var luckybiliet = [];
+
+	luckyt();
 
 	function getnumber() {
 		if (!gameover) {
@@ -73,24 +77,43 @@
 		else {
 			alert("Game is over!");
 			gameover = true;
+			if(lucky === luckybiliet) {
+				document.getElementById("luckynumber").style.backgroundColor = "green";
+				document.getElementById("luckynumber").innerHTML = "SKAMBUTIS!!!! AUKSO PUODAS";
+			}
+
+			else {
+				document.getElementById("luckynumber").style.backgroundColor = "red";
+				document.getElementById("luckynumber").innerHTML = "nieko nelaimejai lol";
+			}
 		}
 	}
+
+	function luckyt() {
+			for (  ; luckybiliet.length<=8 ;  ) {
+				ik = Math.floor(Math.random() * 10);
+				luckybiliet.push(ik);
+
+			}
+			document.getElementById("luckyticket").innerHTML = "Laimingas bilietas yra: " + luckybiliet;
+	}	
 
 	function newgame()   {
 		if(gameover) {
 			gameover = false; // KODEL SITO REIKIA? PASIAISKINTI SU DESTYTOJU
 			lucky = [];
+			luckybiliet = [];
 			document.getElementById("luckynumber").innerHTML = [];
 			document.getElementById("currentnumber").innerHTML = [];
+			document.getElementById("luckynumber").style.backgroundColor = "orange";
 			cleartable();
-
+			luckyt();
+			
 		}
 		else {
 			alert("Game is not over yet!");	
 		}
-		
 	}
-
 
 
 </script>
