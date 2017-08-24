@@ -76,12 +76,19 @@
 		}
 	}
 
-	function newgame() {
+	function newgame()   {
+		if(gameover) {
+			gameover = false; // KODEL SITO REIKIA? PASIAISKINTI SU DESTYTOJU
 			lucky = [];
-			gameover = false;
-			cleartable();
+			document.getElementById("luckynumber").innerHTML = [];
 			document.getElementById("currentnumber").innerHTML = [];
+			cleartable();
 
+		}
+		else {
+			alert("Game is not over yet!");	
+		}
+		
 	}
 
 
